@@ -1,0 +1,78 @@
+$EngagementLink-width-icon: 25px;
+$EngagementLink-arrow: 'images/link-arrow.svg' !default;
+$EngagementLink-arrow-white: 'images/link-arrow-white.svg' !default;
+
+.EngagementLink {
+  @include font-properties(subvisual, small);
+
+  display: inline-flex;
+
+  color: $Theme-color-yellowOrange;
+
+  font-weight: $Theme-typography-fontWeight-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:before {
+    @include background-image($EngagementLink-arrow);
+    content: '';
+
+    display: block;
+    width: $EngagementLink-width-icon;
+    height: $EngagementLink-width-icon;
+    min-width: $EngagementLink-width-icon;
+    margin-right: $Theme-spacing-small;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.EngagementLink.EngagementLink--iconRight {
+  &:before {
+    order: 2;
+
+    margin-right: 0;
+    margin-left: $Theme-spacing-small;
+  }
+}
+
+.EngagementLink.EngagementLink--customIcon {
+  .EngagementLink-icon {
+    width: $EngagementLink-width-icon;
+    height: $EngagementLink-width-icon;
+    margin-right: $Theme-spacing-small;
+  }
+}
+
+.EngagementLink.EngagementLink--iconRight.EngagementLink--customIcon {
+  .EngagementLink-icon {
+    order: 2;
+
+    margin-right: 0;
+    margin-left: $Theme-spacing-small;
+  }
+
+  .EngagementLink-text {
+    order: 1;
+  }
+}
+
+.EngagementLink.EngagementLink--customIcon,
+.EngagementLink.EngagementLink--iconRight.EngagementLink--customIcon {
+  &:before {
+    display: none;
+  }
+}
+
+.EngagementLink.EngagementLink--light {
+  color: $Theme-color-white;
+
+  &:before {
+    @include background-image($EngagementLink-arrow-white);
+  }
+}
