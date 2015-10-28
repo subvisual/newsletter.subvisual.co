@@ -2,8 +2,6 @@ $InputGroup-color: #8db6cb;
 $InputGroup-height: 50px;
 
 .InputGroup {
-  @include font-properties(subvisual, small);
-
   display: flex;
 
   width: 100%;
@@ -41,6 +39,8 @@ $InputGroup-height: 50px;
 }
 
 .InputGroup-action {
+  @include font-properties(subvisual, small);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
