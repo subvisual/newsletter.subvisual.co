@@ -4,6 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import ghPages from 'gulp-gh-pages';
+import sftp from 'gulp-sftp';
 import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
@@ -161,7 +162,11 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 });
 
 gulp.task('deploy', ['build'], () => {
-  return gulp.src('./dist/**/*').pipe(ghPages());
+  return gulp.src('./dist/**/*').pipe(sftp({
+    host: 'subvisual.co',
+    user: 'deploy',
+    remotePath: '/apps/newsletter.subvisual.co/'
+  }));
 });
 
 gulp.task('default', ['clean'], () => {
