@@ -1,5 +1,6 @@
 $InputGroup-color: #8db6cb;
 $InputGroup-height: 50px;
+$InputGroup-min-width: 80px;
 
 .InputGroup {
   display: flex;
@@ -41,13 +42,14 @@ $InputGroup-height: 50px;
 .InputGroup-action {
   @include font-properties(subvisual, small);
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  flex: 1 0 $InputGroup-min-width;
 
-  flex: 1;
+  text-align: center;
 
   height: 100%;
+  min-width: $InputGroup-min-width;
+
+  margin: 0;
 
   background: $Theme-color-yellowOrange;
   border-radius: 0 8px 8px 0;

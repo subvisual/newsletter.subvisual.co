@@ -14,7 +14,6 @@ $EngagementLink-arrow-white: '../images/link-arrow-white.svg' !default;
   text-transform: uppercase;
 
   &:before {
-    @include background-image($EngagementLink-arrow);
     content: '';
 
     display: block;
@@ -23,6 +22,8 @@ $EngagementLink-arrow-white: '../images/link-arrow-white.svg' !default;
     min-width: $EngagementLink-width-icon;
     margin-right: $Theme-spacing-small;
 
+    background-image: url($EngagementLink-arrow);
+    background-image: image-url($EngagementLink-arrow);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -73,6 +74,7 @@ $EngagementLink-arrow-white: '../images/link-arrow-white.svg' !default;
   color: $Theme-color-white;
 
   &:before {
-    @include background-image($EngagementLink-arrow-white);
+    background-image: url($EngagementLink-arrow-white);
+    background-image: image-url($EngagementLink-arrow-white);
   }
 }
