@@ -1,6 +1,6 @@
 $EngagementLink-width-icon: 25px;
-$EngagementLink-arrow: 'images/link-arrow.svg' !default;
-$EngagementLink-arrow-white: 'images/link-arrow-white.svg' !default;
+$EngagementLink-arrow: '../images/link-arrow.svg' !default;
+$EngagementLink-arrow-white: '../images/link-arrow-white.svg' !default;
 
 .EngagementLink {
   @include font-properties(subvisual, small);
