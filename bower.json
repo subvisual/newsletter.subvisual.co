@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "include-media": "~1.4.1"
+    "include-media": "~1.4.1",
+    "blue": "git://github.com/subvisual/blue.git#afdb2e869cbdb072c8aaf77d012446064a34b950"
   },
   "devDependencies": {
     "chai": "~3.4.0",
