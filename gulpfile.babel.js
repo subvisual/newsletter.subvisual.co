@@ -162,7 +162,7 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 });
 
 gulp.task('deploy', ['build'], () => {
-  return gulp.src('./dist/**/*').pipe(sftp({
+  return gulp.src(['./dist/**/*', 'nginx.conf']).pipe(sftp({
     host: 'subvisual.co',
     user: 'deploy',
     remotePath: '/apps/newsletter.subvisual.co/'
