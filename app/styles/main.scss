@@ -2,24 +2,7 @@
 @import "bower_components/include-media/dist/_include-media.scss";
 // endbower
 
-@import 'bower_components/blue/stylesheets/blue/reset';
-@import 'bower_components/blue/stylesheets/blue/theme_vars';
-
-@import 'bower_components/blue/stylesheets/blue/components/nav';
-@import 'bower_components/blue/stylesheets/blue/components/nav_logo';
-@import 'bower_components/blue/stylesheets/blue/components/grid_cell';
-@import 'bower_components/blue/stylesheets/blue/components/content_formatter';
-@import 'bower_components/blue/stylesheets/blue/components/heading';
-@import 'bower_components/blue/stylesheets/blue/components/panel';
-@import 'bower_components/blue/stylesheets/blue/components/horizontal_grid';
-@import 'bower_components/blue/stylesheets/blue/components/text';
-@import 'bower_components/blue/stylesheets/blue/components/button_primary';
-@import 'bower_components/blue/stylesheets/blue/components/footer';
-@import 'bower_components/blue/stylesheets/blue/components/burger';
-
-@import 'bower_components/blue/stylesheets/blue/utilities/margins';
-@import 'bower_components/blue/stylesheets/blue/utilities/visually_hidden';
-
+@import 'theme';
 @import 'components/base';
 
 .browserupgrade {
