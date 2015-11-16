@@ -1,6 +1,11 @@
 $ArchiveImage-width: 460px;
+$ArchiveImage-mobileWidth: 183px;
 
 .ArchiveImage {
   width: 100%;
   max-width: $ArchiveImage-width;
+
+  @include media('<=smallDesktop') {
+   max-width: $ArchiveImage-mobileWidth;
+  }
 }
